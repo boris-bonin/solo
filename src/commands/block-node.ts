@@ -1174,7 +1174,7 @@ export class BlockNodeCommand extends BaseCommand {
               'Healthcheck timed out',
             );
 
-            if (response !== 'OK') {
+            if (response.trim() !== 'OK') {
               throw new SoloError('Bad response status');
             }
 
